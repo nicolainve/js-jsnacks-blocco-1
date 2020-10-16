@@ -7,14 +7,14 @@ var number2 = parseInt( prompt('Inserisci un altro numero') );
 var output1;
 
 if (number1 > number2) {
-    output1 = number1;
+    output1 = 'Il numero maggiore è ' + number1;
 } else if (number1 < number2) {
-    output1 = number2;
+    output1 = 'Il numero maggiore è ' + number2;
 } else {
-    output1 = 'I numeri sono uguali'
+    output1 = 'I numeri sono uguali';
 }
 
-console.log(output1);
+document.getElementById('output1').innerHTML = output1;
 
 
 // JSNACK 2
@@ -33,7 +33,8 @@ if (word1.length > word2.length) {
     output2 = 'Hai inserito due parole di uguale lunghezza'
 }
 
-console.log(output2);
+document.getElementById('output2').innerHTML = output2;
+
 
 
 // JSNACK 3
@@ -46,7 +47,7 @@ for (var i = 0; i < 5; i++) {
     somma += number;
 }
 
-console.log(somma);
+document.getElementById('output3').innerHTML = somma;
 
 
 // JSNACK 4
@@ -65,11 +66,15 @@ for (var i = 0; i < guestsList.length; i++) {
     }
 }
 
+var output4;
+
 if (nameFound == true) {
-    console.log('Benvenuto')
+    output4 = 'Benvenuto'
 } else {
-    console.log('Mi spiace, non sei nella lista degli invitati.')
+    output4 = 'Mi spiace, non sei nella lista degli invitati.'
 }
+
+document.getElementById('output4').innerHTML = output4;
 
 
 // JSNACK 5
@@ -84,4 +89,4 @@ for (var i = 0; i < 6; i++) {
     }
 }
 
-console.log(numbersOdd);
+document.getElementById('output5').innerHTML = numbersOdd;
